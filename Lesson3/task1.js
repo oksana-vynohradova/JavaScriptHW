@@ -8,3 +8,11 @@ f(2); // 8
 f('Content'); // Error: parameter type is not a Number
 ```
 */
+
+function f(n) {
+    if (typeof n === 'number') {
+       return n ** 3;
+    } else {
+        throw new Error('parameter type is not a Number');
+    }
+}
