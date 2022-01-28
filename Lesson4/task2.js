@@ -13,9 +13,9 @@ filter(arr, function(item, i, arr) {});
 
 function filter(arr, func) {
     if (!Array.isArray(arr)) {
-        throw new Error('first parameter type should be an array');
+        throw new TypeError('first parameter type should be an array');
     } else if (typeof func !== 'function') {
-        throw new Error('second parameter type should be a function');
+        throw new TypeError('second parameter type should be a function');
     }
 
     let array = [];

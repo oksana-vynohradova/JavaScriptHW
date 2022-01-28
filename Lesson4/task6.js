@@ -15,11 +15,11 @@ reduceRight(arr, function(acc, item, i, arr) {}, acc);
 
 function reduceRight(arr, func, acc) {
     if (!Array.isArray(arr)) {
-        throw new Error('first parameter type should be an array');
+        throw new TypeError('first parameter type should be an array');
     } else if (typeof func !== 'function') {
-        throw new Error('second parameter type should be a function');
+        throw new TypeError('second parameter type should be a function');
     } else if (typeof acc !== 'number' && typeof acc !== 'string') {
-        throw new Error('third parameter type should be a number or a string')
+        throw new TypeError('third parameter type should be a number or a string')
     }
 
     for (let i = 1; i <= arr.length; i++) {

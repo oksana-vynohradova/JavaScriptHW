@@ -25,12 +25,10 @@ f(arr5); // 3
 
 function f(arr) {
     if (!Array.isArray(arr)) {
-        throw new Error('parameter type should be an array');
+        throw new TypeError('parameter type should be an array');
     }
 
-    let new_arr = arr.flat(Infinity);
-
-    return new_arr.reduce(function(prev, current) {
+    return arr.flat(Infinity).reduce(function(prev, current) {
         if (typeof current !== 'number') {
             throw new TypeError('all parameter types should be an array or a number');
         }
